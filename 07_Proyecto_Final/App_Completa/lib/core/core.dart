@@ -1,0 +1,1 @@
+// Utilidades, constantes, helpers globales
