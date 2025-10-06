@@ -1,520 +1,224 @@
-# 🎯 Ejercicios Extra: Calculadora Simple
+# 🚀 Ejercicios Extra: Calculadora Simple
 
-## 📚 Introducción
+## 🎯 Descripción
 
-Estos ejercicios están diseñados para expandir tu calculadora básica y profundizar en conceptos más avanzados de Dart. Cada nivel incluye desafíos progresivos que te ayudarán a mejorar tus habilidades de programación.
+Una vez completado el **ejercicio base** de la calculadora simple, estos ejercicios adicionales te permitirán practicar y profundizar en la **sintaxis básica de Dart** mediante mejoras progresivas a tu calculadora. Cada ejercicio construye sobre el anterior, manteniendo el enfoque en **aplicación de consola**.
 
-**💡 Consejo**: Completa cada ejercicio antes de pasar al siguiente. Cada uno construye sobre el anterior.
+> **📌 Requisito previo**: Tener completado el ejercicio base de la calculadora simple con las 4 operaciones básicas funcionando.
 
 ---
 
-## 🟢 Nivel 1: Básico (Fundamentos)
+## 🟢 Nivel Básico
+*Extensiones simples que refuerzan conceptos básicos*
 
-### 📝 Ejercicio 1.1: Calculadora de tres números
-**Objetivo**: Extender la funcionalidad para manejar múltiples operandos
+### 📝 Ejercicio 1: Calculadora de Tres Números
+**🎯 Objetivo**: Practicar manejo de múltiples variables y operaciones secuenciales
 
-**Descripción**: Modifica tu calculadora para que pueda sumar, restar y multiplicar **tres números** en lugar de dos.
+**📋 Descripción**: 
+Modifica tu calculadora para que pueda trabajar con **tres números** en lugar de dos.
 
-**Especificaciones**:
+**🛠️ Tareas**:
 - Solicitar tres números al usuario
-- Mostrar: `a + b + c`, `a - b - c`, `a × b × c`
-- Para división: `a ÷ b ÷ c` (dividir a entre b, luego entre c)
+- Realizar operaciones: `(num1 + num2) * num3`, `(num1 - num2) / num3`
+- Mostrar ambos resultados formateados
 
-**Ejemplo de salida**:
-```
-Ingrese tres números:
-Número 1: 12
-Número 2: 4
-Número 3: 2
+**💡 Conceptos practicados**: Variables múltiples, precedencia de operadores, formateo de salida
 
-Resultados:
-12 + 4 + 2 = 18
-12 - 4 - 2 = 6
-12 × 4 × 2 = 96
-12 ÷ 4 ÷ 2 = 1.5
-```
-
-**Pistas**:
-- Crea nuevas funciones: `sumarTres()`, `restarTres()`, etc.
-- Considera el orden de las operaciones para resta y división
+**⏱️ Tiempo estimado**: 20-30 minutos
 
 ---
 
-### 📝 Ejercicio 1.2: Detector de resultados negativos
-**Objetivo**: Implementar validación condicional de resultados
+### 📝 Ejercicio 2: Validador de Resultados
+**🎯 Objetivo**: Practicar condicionales simples y mensajes informativos
 
-**Descripción**: Añade lógica para detectar cuando el resultado de cualquier operación es negativo y mostrar un mensaje especial.
+**📋 Descripción**: 
+Mejora tu calculadora para que **analice y comente** los resultados obtenidos.
 
-**Especificaciones**:
-- Si el resultado es negativo, mostrar: `⚠️ Resultado negativo: [valor]`
-- Si es positivo o cero, mostrar normalmente: `✅ Resultado: [valor]`
-- Aplicar a todas las operaciones
+**🛠️ Tareas**:
+- Si el resultado es negativo, mostrar: "⚠️ Resultado negativo: [valor]"
+- Si el resultado es cero, mostrar: "🎯 Resultado exacto: cero"
+- Si el resultado es mayor a 100, mostrar: "🚀 ¡Resultado grande!: [valor]"
+- Si el resultado tiene decimales, mostrar: "🔢 Resultado decimal: [valor]"
 
-**Ejemplo**:
-```
-5 - 8 = ⚠️ Resultado negativo: -3
-8 + 2 = ✅ Resultado: 10
-```
+**💡 Conceptos practicados**: Condicionales (`if-else`), comparación de números, interpolación de strings
+
+**⏱️ Tiempo estimado**: 15-25 minutos
 
 ---
 
-### 📝 Ejercicio 1.3: Selector de operación
-**Objetivo**: Implementar control de flujo básico
+### 📝 Ejercicio 3: Selector de Operación
+**🎯 Objetivo**: Practicar entrada de usuario y estructura de control switch
 
-**Descripción**: Permite al usuario elegir qué operación realizar en lugar de mostrar todas.
+**📋 Descripción**: 
+Permite al usuario **elegir qué operación** realizar en lugar de mostrar todas.
 
-**Especificaciones**:
-- Mostrar menú: `1-Suma, 2-Resta, 3-Multiplicación, 4-División`
+**🛠️ Tareas**:
+- Mostrar menú: "1. Suma | 2. Resta | 3. Multiplicación | 4. División"
+- Leer la opción del usuario
 - Realizar solo la operación seleccionada
-- Validar entrada (1-4)
+- Manejar opciones inválidas con mensaje de error
 
-**Código de ejemplo**:
-```dart
-print('Seleccione operación:');
-print('1. Suma');
-print('2. Resta');
-print('3. Multiplicación');
-print('4. División');
-```
+**💡 Conceptos practicados**: `switch-case`, entrada de usuario, validación básica
+
+**⏱️ Tiempo estimado**: 25-35 minutos
 
 ---
 
-## 🟡 Nivel 2: Intermedio (Funcionalidad)
+## 🟡 Nivel Intermedio
+*Mejoras que introducen conceptos adicionales de sintaxis*
 
-### 📝 Ejercicio 2.1: Calculadora completa mejorada
-**Objetivo**: Consolidar todas las operaciones básicas con validación
+### 📝 Ejercicio 4: Operaciones Extendidas
+**🎯 Objetivo**: Practicar uso de la librería `dart:math` y funciones adicionales
 
-**Descripción**: Si no lo has hecho, implementa las cuatro operaciones básicas con validación completa.
+**📋 Descripción**: 
+Agrega **operaciones matemáticas adicionales** a tu calculadora.
 
-**Especificaciones**:
-- Suma, resta, multiplicación y división
-- Validación de división por cero
-- Manejo de errores con try-catch
-- Mensajes de error informativos
+**🛠️ Tareas**:
+- Agregar opción 5: Potencia (`num1 ^ num2`)
+- Agregar opción 6: Raíz cuadrada (solo del primer número)
+- Agregar opción 7: Porcentaje (`num1% de num2`)
+- Importar `dart:math` para usar `pow()` y `sqrt()`
 
-**Ejemplo de validación**:
-```dart
-double? dividir(double a, double b) {
-  if (b == 0) {
-    print('❌ Error: No se puede dividir por cero');
-    return null;
-  }
-  return a / b;
-}
-```
+**💡 Conceptos practicados**: Importación de librerías, funciones matemáticas, manejo de tipos
+
+**⏱️ Tiempo estimado**: 30-40 minutos
 
 ---
 
-### 📝 Ejercicio 2.2: Calculadora con validación avanzada
-**Objetivo**: Implementar manejo robusto de errores
+### 📝 Ejercicio 5: Calculadora Repetitiva
+**🎯 Objetivo**: Practicar bucles y control de flujo del programa
 
-**Descripción**: Añade validación para entrada de datos inválida (texto en lugar de números).
+**📋 Descripción**: 
+Permite realizar **múltiples operaciones** sin reiniciar el programa.
 
-**Especificaciones**:
-- Usar `try-catch` para capturar errores de parsing
-- Permitir reintentar entrada inválida
-- Mostrar mensajes de error específicos
+**🛠️ Tareas**:
+- Después de cada operación, preguntar: "¿Realizar otra operación? (s/n)"
+- Si responde 's', volver al inicio
+- Si responde 'n', mostrar mensaje de despedida
+- Validar que solo acepte 's' o 'n'
 
-**Implementación sugerida**:
-```dart
-double? leerNumeroSeguro(String mensaje) {
-  while (true) {
-    try {
-      stdout.write(mensaje);
-      String? entrada = stdin.readLineSync();
-      return double.parse(entrada ?? '0');
-    } catch (e) {
-      print('❌ Entrada inválida. Ingrese un número válido.');
-    }
-  }
-}
-```
+**💡 Conceptos practicados**: Bucles `while`, control de flujo, validación de entrada
+
+**⏱️ Tiempo estimado**: 20-30 minutos
 
 ---
 
-### 📝 Ejercicio 2.3: Calculadora con repetición
-**Objetivo**: Implementar bucles y control de flujo
+### 📝 Ejercicio 6: Validación Robusta
+**🎯 Objetivo**: Practicar manejo de errores y conversión de tipos
 
-**Descripción**: Permite al usuario realizar múltiples operaciones sin reiniciar el programa.
+**📋 Descripción**: 
+Mejora la **validación de entrada** para que tu calculadora sea más resistente a errores.
 
-**Especificaciones**:
-- Después de cada cálculo, preguntar: `¿Continuar? (s/n)`
-- Bucle principal que se repita hasta que el usuario diga "no"
-- Limpiar pantalla entre operaciones (opcional)
+**🛠️ Tareas**:
+- Validar que la entrada sean números válidos
+- Si el usuario ingresa texto, mostrar error y solicitar nuevamente
+- Implementar validación para división por cero
+- Crear función `leerNumeroSeguro()` que garantice entrada válida
 
-**Estructura del bucle**:
-```dart
-void main() {
-  bool continuar = true;
-  
-  while (continuar) {
-    // Realizar cálculo
-    continuar = preguntarContinuar();
-  }
-  
-  print('¡Gracias por usar la calculadora!');
-}
-```
+**💡 Conceptos practicados**: `try-catch`, conversión de tipos, funciones de validación, bucles de retry
+
+**⏱️ Tiempo estimado**: 35-45 minutos
 
 ---
 
-## 🟠 Nivel 3: Avanzado (Estructuras de datos)
+## 🔴 Nivel Avanzado
+*Desafíos que combinan múltiples conceptos de sintaxis*
 
-### 📝 Ejercicio 3.1: Suma de lista de números
-**Objetivo**: Trabajar con listas y funciones de orden superior
+### 📝 Ejercicio 7: Historial Simple
+**🎯 Objetivo**: Practicar listas y manejo de colecciones básicas
 
-**Descripción**: Implementa una función que reciba una lista de números y devuelva su suma total.
+**📋 Descripción**: 
+Implementa un **historial básico** de las operaciones realizadas.
 
-**Especificaciones**:
-- Función `sumarLista(List<double> numeros)`
-- Permitir al usuario ingresar n números
-- Mostrar la suma total y el promedio
+**🛠️ Tareas**:
+- Crear una lista para guardar las operaciones: `List<String> historial = [];`
+- Después de cada operación, guardar: "15 + 3 = 18"
+- Agregar opción de menú: "8. Ver historial"
+- Mostrar las últimas 5 operaciones realizadas
+- Al salir, mostrar cuántas operaciones se realizaron en total
 
-**Implementación**:
-```dart
-double sumarLista(List<double> numeros) {
-  return numeros.fold(0.0, (sum, num) => sum + num);
-}
+**💡 Conceptos practicados**: Listas, métodos de lista (`add`, `length`), iteración, formateo de strings
 
-double promedioLista(List<double> numeros) {
-  if (numeros.isEmpty) return 0;
-  return sumarLista(numeros) / numeros.length;
-}
-```
-
-**Ejemplo de uso**:
-```
-¿Cuántos números desea sumar? 4
-Número 1: 10
-Número 2: 20
-Número 3: 15
-Número 4: 5
-
-Suma total: 50
-Promedio: 12.5
-```
+**⏱️ Tiempo estimado**: 40-50 minutos
 
 ---
 
-### 📝 Ejercicio 3.2: Calculadora científica básica
-**Objetivo**: Ampliar operaciones matemáticas
+### 📝 Ejercicio 8: Calculadora con Memoria
+**🎯 Objetivo**: Practicar variables globales y funciones especializadas
 
-**Descripción**: Añade operaciones matemáticas avanzadas utilizando la librería `dart:math`.
+**📋 Descripción**: 
+Agrega funciones de **memoria** como las calculadoras reales.
 
-**Operaciones a implementar**:
-- Potencia (a^b)
-- Raíz cuadrada
-- Seno, coseno, tangente
-- Logaritmo natural y base 10
-- Valor absoluto
+**🛠️ Tareas**:
+- Variable `double memoria = 0;`
+- Opción "9. Guardar en memoria" (guarda último resultado)
+- Opción "10. Recuperar de memoria" (usa valor de memoria como primer número)
+- Opción "11. Limpiar memoria" (pone memoria en 0)
+- Mostrar valor actual de memoria en el menú
 
-**Código de ejemplo**:
-```dart
-import 'dart:math';
+**💡 Conceptos practicados**: Variables globales, funciones void, estado del programa
 
-double potencia(double base, double exponente) {
-  return pow(base, exponente).toDouble();
-}
-
-double raizCuadrada(double numero) {
-  if (numero < 0) {
-    throw ArgumentError('No se puede calcular raíz de número negativo');
-  }
-  return sqrt(numero);
-}
-```
+**⏱️ Tiempo estimado**: 30-40 minutos
 
 ---
 
-### 📝 Ejercicio 3.3: Historial de operaciones
-**Objetivo**: Implementar almacenamiento temporal de datos
+## ✅ Lista de verificación
 
-**Descripción**: Mantén un historial de todas las operaciones realizadas durante la sesión.
+### Al completar los ejercicios básicos deberías tener:
+- [ ] Calculadora que trabaja con 3 números
+- [ ] Mensajes informativos sobre los resultados
+- [ ] Menú interactivo para elegir operaciones
+- [ ] Manejo básico de errores
 
-**Especificaciones**:
-- Almacenar cada operación en una lista
-- Mostrar historial al final o cuando el usuario lo solicite
-- Opción para limpiar historial
+### Al completar los ejercicios intermedios deberías tener:
+- [ ] Operaciones matemáticas extendidas (potencia, raíz, porcentaje)
+- [ ] Programa que permite múltiples operaciones sin reiniciar
+- [ ] Validación robusta de entrada de datos
+- [ ] Uso de librerías externas (`dart:math`)
 
-**Estructura de datos**:
-```dart
-class Operacion {
-  final double operando1;
-  final double operando2;
-  final String operador;
-  final double resultado;
-  final DateTime fecha;
-  
-  Operacion(this.operando1, this.operando2, this.operador, this.resultado) 
-    : fecha = DateTime.now();
-  
-  @override
-  String toString() {
-    return '$operando1 $operador $operando2 = $resultado';
-  }
-}
-```
+### Al completar los ejercicios avanzados deberías tener:
+- [ ] Historial de operaciones realizadas
+- [ ] Sistema de memoria básico
+- [ ] Programa completo y robusto
+- [ ] Dominio sólido de sintaxis básica de Dart
 
 ---
 
-## 🔴 Nivel 4: Experto (Funcionalidades avanzadas)
+## 🎯 Objetivo pedagógico
 
-### 📝 Ejercicio 4.1: Sistema de deshacer (Undo)
-**Objetivo**: Implementar patrones de diseño y gestión de estado
+Estos ejercicios están diseñados para que practiques **progresivamente** los conceptos de sintaxis básica de Dart:
 
-**Descripción**: Permite al usuario deshacer la última operación realizada.
-
-**Especificaciones**:
-- Usar stack (pila) para almacenar estados
-- Comando "deshacer" que revierte el último cálculo
-- Máximo 10 operaciones en el historial de deshacer
-
-**Implementación con Stack**:
-```dart
-class CalculadoraConUndo {
-  final List<Operacion> _historial = [];
-  final List<Operacion> _pilaDeshacer = [];
-  
-  void ejecutarOperacion(Operacion op) {
-    _pilaDeshacer.add(op);
-    if (_pilaDeshacer.length > 10) {
-      _pilaDeshacer.removeAt(0);
-    }
-    _historial.add(op);
-  }
-  
-  bool deshacer() {
-    if (_pilaDeshacer.isEmpty) return false;
-    
-    Operacion ultima = _pilaDeshacer.removeLast();
-    _historial.remove(ultima);
-    print('Operación deshecha: $ultima');
-    return true;
-  }
-}
-```
+- **Variables y tipos de datos** (int, double, String, bool)
+- **Operadores** (aritméticos, de comparación, lógicos)
+- **Estructuras de control** (if-else, switch-case, while)
+- **Funciones** (parámetros, retorno, void)
+- **Entrada/Salida** por consola
+- **Listas básicas** y colecciones simples
+- **Importación** de librerías estándar
+- **Manejo básico** de errores
 
 ---
 
-### 📝 Ejercicio 4.2: Interfaz de menú avanzada
-**Objetivo**: Crear una experiencia de usuario completa
+## 💡 Consejos de implementación
 
-**Descripción**: Implementa una interfaz de consola completa con múltiples opciones.
-
-**Opciones del menú**:
-1. Operaciones básicas
-2. Operaciones científicas
-3. Trabajar con listas
-4. Ver historial
-5. Limpiar historial
-6. Deshacer última operación
-7. Configuración
-8. Ayuda
-9. Salir
-
-**Ejemplo de interfaz**:
-```
-╔════════════════════════════════╗
-║        CALCULADORA PRO         ║
-║                                ║
-║  1. Operaciones básicas        ║
-║  2. Operaciones científicas    ║
-║  3. Trabajar con listas        ║
-║  4. Ver historial             ║
-║  5. Limpiar historial         ║
-║  6. Deshacer                  ║
-║  7. Configuración             ║
-║  8. Ayuda                     ║
-║  9. Salir                     ║
-║                                ║
-╚════════════════════════════════╝
-
-Seleccione una opción (1-9): 
-```
+1. **Desarrolla incrementalmente**: Completa un ejercicio antes de pasar al siguiente
+2. **Prueba cada cambio**: Ejecuta tu programa después de cada modificación  
+3. **Mantén tu código organizado**: Usa funciones para evitar repetición
+4. **Comenta tu código**: Explica la lógica de partes complejas
+5. **No tengas miedo de experimentar**: Estos ejercicios son para practicar
 
 ---
 
-### 📝 Ejercicio 4.3: Calculadora con configuraciones
-**Objetivo**: Implementar personalización y persistencia
+## ⏰ Tiempo total estimado
 
-**Descripción**: Añade opciones de configuración que persistan entre sesiones.
+- **Ejercicios básicos (1-3)**: 1-1.5 horas
+- **Ejercicios intermedios (4-6)**: 1.5-2 horas  
+- **Ejercicios avanzados (7-8)**: 1-1.5 horas
 
-**Configuraciones**:
-- Precisión decimal (número de decimales a mostrar)
-- Formato de salida (científico, normal)
-- Idioma de los mensajes
-- Tema de colores (si usas códigos ANSI)
-
-**Almacenamiento en archivo**:
-```dart
-import 'dart:io';
-import 'dart:convert';
-
-class Configuracion {
-  int precision = 2;
-  String formato = 'normal';
-  String idioma = 'es';
-  
-  Map<String, dynamic> toJson() => {
-    'precision': precision,
-    'formato': formato,
-    'idioma': idioma,
-  };
-  
-  void fromJson(Map<String, dynamic> json) {
-    precision = json['precision'] ?? 2;
-    formato = json['formato'] ?? 'normal';
-    idioma = json['idioma'] ?? 'es';
-  }
-  
-  void guardar() async {
-    final file = File('config.json');
-    await file.writeAsString(jsonEncode(toJson()));
-  }
-  
-  void cargar() async {
-    try {
-      final file = File('config.json');
-      if (await file.exists()) {
-        final contents = await file.readAsString();
-        fromJson(jsonDecode(contents));
-      }
-    } catch (e) {
-      print('No se pudo cargar configuración: $e');
-    }
-  }
-}
-```
+**Total**: 3.5-5 horas de práctica intensiva de sintaxis básica
 
 ---
 
-## 🏆 Proyecto Final: Calculadora Completa
+**¡Que disfrutes programando! 🚀**
 
-### 📝 Desafío Ultimate: Sistema completo
-**Objetivo**: Integrar todas las funcionalidades en una aplicación profesional
-
-**Características requeridas**:
-- ✅ Todas las operaciones básicas y científicas
-- ✅ Manejo robusto de errores
-- ✅ Interfaz de usuario intuitiva
-- ✅ Historial con deshacer/rehacer
-- ✅ Configuraciones personalizables
-- ✅ Ayuda integrada
-- ✅ Código bien documentado
-- ✅ Arquitectura modular
-
-**Estructura de archivos sugerida**:
-```
-calculadora_pro/
-├── lib/
-│   ├── calculadora.dart      # Lógica principal
-│   ├── operaciones.dart      # Operaciones matemáticas
-│   ├── interfaz.dart         # UI de consola
-│   ├── historial.dart        # Gestión de historial
-│   ├── configuracion.dart    # Settings
-│   └── utilidades.dart       # Funciones auxiliares
-├── bin/
-│   └── main.dart            # Punto de entrada
-├── test/
-│   └── calculadora_test.dart # Tests unitarios
-└── README.md               # Documentación
-```
-
----
-
-## 📊 Sistema de Puntuación
-
-| Nivel | Ejercicios | Puntos Base | Bonus | Total Posible |
-|-------|------------|-------------|-------|--------------|
-| Básico | 1.1 - 1.3 | 15 pts | 5 pts | 20 pts |
-| Intermedio | 2.1 - 2.3 | 25 pts | 10 pts | 35 pts |
-| Avanzado | 3.1 - 3.3 | 30 pts | 15 pts | 45 pts |
-| Experto | 4.1 - 4.3 | 40 pts | 20 pts | 60 pts |
-| **Proyecto Final** | Ultimate | 50 pts | 30 pts | 80 pts |
-| **TOTAL** | - | **160 pts** | **80 pts** | **240 pts** |
-
----
-
-## 🎯 Criterios de Evaluación Detallados
-
-### Funcionalidad (40%)
-- **Excelente (36-40)**: Todas las funcionalidades implementadas sin errores
-- **Bueno (28-35)**: Funcionalidades principales + algunas avanzadas
-- **Satisfactorio (20-27)**: Funcionalidades básicas completas
-- **Insuficiente (<20)**: Funcionalidades incompletas o con errores
-
-### Calidad del Código (30%)
-- **Excelente (27-30)**: Código limpio, bien estructurado, documentado
-- **Bueno (21-26)**: Código organizado con documentación básica
-- **Satisfactorio (15-20)**: Código funcional pero desorganizado
-- **Insuficiente (<15)**: Código difícil de entender o mantener
-
-### Innovación (20%)
-- **Excelente (18-20)**: Características creativas más allá de los requisitos
-- **Bueno (14-17)**: Algunas mejoras o características adicionales
-- **Satisfactorio (10-13)**: Cumple exactamente con los requisitos
-- **Insuficiente (<10)**: No cumple con los requisitos mínimos
-
-### Testing (10%)
-- **Excelente (9-10)**: Tests comprehensivos para todas las funciones
-- **Bueno (7-8)**: Tests básicos para funciones principales
-- **Satisfactorio (5-6)**: Algunos tests o pruebas manuales documentadas
-- **Insuficiente (<5)**: Sin evidencia de testing
-
----
-
-## 💡 Tips para el Éxito
-
-### 🚀 Para Principiantes
-1. **Empieza pequeño**: No intentes hacer todo a la vez
-2. **Prueba frecuentemente**: Ejecuta tu código después de cada cambio pequeño
-3. **Lee los errores**: Los mensajes de error son tus amigos
-4. **Usa DartPad**: Para probar fragmentos de código rápidamente
-
-### 🎯 Para Nivel Intermedio
-1. **Planifica la arquitectura**: Piensa en cómo organizar tu código
-2. **Maneja errores apropiadamente**: No ignores los casos edge
-3. **Escribe funciones pequeñas**: Una función, una responsabilidad
-4. **Documenta tu código**: Tu yo futuro te lo agradecerá
-
-### 🏆 Para Nivel Avanzado
-1. **Aplica patrones de diseño**: Strategy, Command, Observer
-2. **Considera la performance**: ¿Tu código es eficiente?
-3. **Piensa en testing**: Escribe código testeable
-4. **Mantén SOLID principles**: Especialmente Single Responsibility
-
----
-
-## 📚 Recursos Adicionales
-
-### 📖 Documentación
-- [Dart Official Documentation](https://dart.dev/guides)
-- [Effective Dart Style Guide](https://dart.dev/guides/language/effective-dart)
-- [Dart Math Library](https://api.dart.dev/stable/dart-math/dart-math-library.html)
-
-### 🎥 Video Tutoriales
-- [Dart Programming Tutorial](https://www.youtube.com/playlist?list=PLjxrf2q8roU0Net_g1NT5_vOO3s_FR02J)
-- [Flutter & Dart Bootcamp](https://www.udemy.com/course/flutter-bootcamp-with-dart/)
-
-### 🛠️ Herramientas
-- [DartPad](https://dartpad.dev) - Editor online
-- [VS Code Dart Extension](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code)
-- [IntelliJ IDEA Dart Plugin](https://plugins.jetbrains.com/plugin/6351-dart)
-
----
-
-## 🎖️ Certificado de Finalización
-
-Al completar exitosamente el **Proyecto Final** con una puntuación mínima de **180/240 puntos**, habrás demostrado:
-
-✅ Dominio de la sintaxis básica de Dart  
-✅ Capacidad de crear aplicaciones funcionales  
-✅ Habilidades de resolución de problemas  
-✅ Conocimiento de buenas prácticas de programación  
-✅ Experiencia con testing y validación  
-
-**¡Felicidades! Estás listo para el siguiente nivel de Dart y Flutter! 🚀**
-
----
-
-*¿Preguntas? ¿Necesitas ayuda? No dudes en consultar con tu instructor o usar los recursos de la comunidad Dart.*
+*Recuerda: Cada ejercicio te acerca más al dominio de la sintaxis básica de Dart.*
