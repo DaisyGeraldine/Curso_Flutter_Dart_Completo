@@ -364,7 +364,6 @@ dart format ejercicio.dart
 
 - `Ctrl + Shift + P`: Paleta de comandos
 - `F5`: Ejecutar con debugger
-- `Ctrl + /`: Comentar/descomentar línea
 - `Alt + Shift + F`: Formatear documento
 - `Ctrl + Space`: Autocompletado
 
